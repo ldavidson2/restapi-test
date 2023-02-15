@@ -2,8 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import awsmobile from "../aws-exports";
-import Amplify from "aws-amplify";
-import { API } from "aws-amplify";
+import { Amplify, API } from "aws-amplify";
 
 Amplify.configure(awsmobile);
 API.configure(awsmobile);
@@ -28,7 +27,7 @@ export default function Message() {
   }, []);
   return (
     <div>
-      <h1>Results:</h1>
+      <h1>Results :</h1>
       {result}
     </div>
   );
