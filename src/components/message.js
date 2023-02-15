@@ -1,11 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import 'awsconfig' from './aws-exports';
-import Amplify, { API } from "aws-amplify";
 
-Amplify.configure(awsconfig);
-API.configure(awsconfig);
+
 
 const myAPI = "testapi";
 const path = "/items";
