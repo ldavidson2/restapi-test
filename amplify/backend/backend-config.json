@@ -1,4 +1,45 @@
 {
+  "api": {
+    "testapi": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "restapifunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "restapifunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_restapifunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "restapifunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_restapifunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "restapifunction"
+        }
+      ]
+    }
+  },
   "storage": {
     "RestApiDB": {
       "providerPlugin": "awscloudformation",
