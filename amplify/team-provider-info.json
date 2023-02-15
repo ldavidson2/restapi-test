@@ -18,7 +18,7 @@
       "function": {
         "restapifunction": {
           "deploymentBucketName": "amplify-amplify0469e279cb5c4-staging-215200-deployment",
-          "s3Key": "amplify-builds/restapifunction-696a6a62552b59544a52-build.zip"
+          "s3Key": "amplify-builds/restapifunction-56503052796736596c6e-build.zip"
         }
       },
       "api": {
