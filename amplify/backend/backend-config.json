@@ -1,1 +1,8 @@
-{}
+{
+  "storage": {
+    "RestApiDB": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}
