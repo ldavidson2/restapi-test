@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+python-ldap = {path = "./dependencies/python_ldap-3.1.0-cp37-cp37m-win_amd64.whl"}
 src = {editable = true, path = "./src"}
 
 [requires]
