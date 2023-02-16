@@ -6,7 +6,7 @@ import Message from "./components/message";
 function App() {
   return (
     <div className="App">
-      {/* <Message /> */}
+      <Message />
     </div>
   );
 }
