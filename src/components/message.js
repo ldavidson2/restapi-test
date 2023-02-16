@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import awsconfig from "./aws-exports";
+import "awsconfig" from "./aws-exports";
 import Amplify from "aws-amplify";
 import { API } from "aws-amplify";
 
