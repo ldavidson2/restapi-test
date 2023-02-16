@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import awsmobile from "../aws-exports";
 import { Amplify, API } from "aws-amplify";
 
