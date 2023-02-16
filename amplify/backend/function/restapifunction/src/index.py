@@ -1,4 +1,5 @@
 import json
+import boto3
 
 dynamodb = boto3.resource('dynamodb', region_name="us-east-2",
          aws_access_key_id="AKIAX3FHVXYSKFFYPGE7",
@@ -6,15 +7,12 @@ dynamodb = boto3.resource('dynamodb', region_name="us-east-2",
 table = dynamodb.Table('RestApiDB-staging')
 
 def handler(event, context):
-    response = table.get_item(
-        Key={
-            'PK': 'COMP#0',
-            'SK': 'COMP#0'
-        }
+    response = table.query(
+    KeyConditionExpression=Key('PK').eq('COMP#0')
     )
 
-    data = str(response['Item']['companyName'])
-  print('received event:')
-  print(event)
+    data = str(response['Items'])
+    print('received event:')
+    print(event)
   
-  return data
+    return data

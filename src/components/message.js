@@ -1,12 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
+import awsmobile from "../aws-exports";
+import { Amplify, API } from "aws-amplify";
+
+Amplify.configure(awsmobile);
+API.configure(awsmobile);
+
+const myAPI = "testapi";
+const path = "/items";
 
 export default function Message() {
   const [result, setresult] = useState(null);
   const message = async () => {
     try {
-      let res = await axios.get("https://wr564a0aw3.execute-api.us-east-2.amazonaws.com/staging");
+      let res = await API.get(myAPI, path, {});
       let result = res.data;
       setresult(result);
     } catch (e) {
@@ -19,7 +26,7 @@ export default function Message() {
   }, []);
   return (
     <div>
-      <h1>Results :</h1>
+      <h1>Results:</h1>
       {result}
     </div>
   );
